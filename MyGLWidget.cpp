@@ -33,6 +33,7 @@ void MyGLWidget::paintGL ()
   // Pintem l'escena
   glDrawArrays(GL_TRIANGLES, 0, 3);
   glDrawArrays(GL_TRIANGLES, 1, 4);
+  glDrawArrays(GL_TRIANGLES, 2, 5);
 
   // Desactivem el VAO
   glBindVertexArray(0);
@@ -45,7 +46,7 @@ void MyGLWidget::resizeGL (int w, int h)
 
 void MyGLWidget::createBuffers ()
 {
-  glm::vec3 Vertices[4];  // Tres vèrtexs amb X, Y i Z
+  glm::vec3 Vertices[5];  // Tres vèrtexs amb X, Y i Z
   /*Vertices[0] = glm::vec3(-1.0, 0.0, 0.0);
   Vertices[1] = glm::vec3(1.0, 0.0, 0.0);
   Vertices[2] = glm::vec3(0.0, 1.0, 0.0);
@@ -59,9 +60,10 @@ void MyGLWidget::createBuffers ()
 
   //Cuadrado mas pequeño que widget
   Vertices[1] = glm::vec3(-0.8, -0.8, 0.0);
-  Vertices[0] = glm::vec3(-0.8, 0.8, 0.0);
+  Vertices[3] = glm::vec3(-0.8, 0.8, 0.0);
   Vertices[2] = glm::vec3(0.8, 0.8, 0.0);
-  Vertices[3] = glm::vec3(0.8, -0.8, 0.0);
+  Vertices[0] = glm::vec3(0.8, -0.8, 0.0);
+  Vertices[4] = glm::vec3(0.0, 1.0, 0.0);
 
   // Creació del Vertex Array Object (VAO) que usarem per pintar
   glGenVertexArrays(1, &VAO);
