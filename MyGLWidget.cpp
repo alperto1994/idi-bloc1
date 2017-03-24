@@ -59,10 +59,10 @@ void MyGLWidget::createBuffers ()
   Vertices[3] = glm::vec3(0.0, -1.0, 0.0);*/
 
   //Cuadrado mas pequeño que widget
-  Vertices[1] = glm::vec3(-0.8, -0.8, 0.0);
-  Vertices[3] = glm::vec3(-0.8, 0.8, 0.0);
-  Vertices[2] = glm::vec3(0.8, 0.8, 0.0);
-  Vertices[0] = glm::vec3(0.8, -0.8, 0.0);
+  Vertices[1] = glm::vec3(-0.8, -1.0, 0.0);
+  Vertices[3] = glm::vec3(-0.8, 0.4, 0.0);
+  Vertices[2] = glm::vec3(0.8, 0.4, 0.0);
+  Vertices[0] = glm::vec3(0.8, -1.0, 0.0);
   Vertices[4] = glm::vec3(0.0, 1.0, 0.0);
 
   // Creació del Vertex Array Object (VAO) que usarem per pintar
