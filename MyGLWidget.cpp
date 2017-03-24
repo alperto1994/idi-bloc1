@@ -31,9 +31,12 @@ void MyGLWidget::paintGL ()
   glBindVertexArray(VAO);
 
   // Pintem l'escena
-  glDrawArrays(GL_TRIANGLES, 0, 3);
-  glDrawArrays(GL_TRIANGLES, 1, 4);
-  glDrawArrays(GL_TRIANGLES, 2, 5);
+  //glDrawArrays(GL_TRIANGLES, 0, 3);
+  //glDrawArrays(GL_TRIANGLES, 1, 4);
+  //glDrawArrays(GL_TRIANGLES, 2, 5);
+
+  glDrawArrays(GL_TRIANGLE_STRIP, 0, 5);
+
 
   // Desactivem el VAO
   glBindVertexArray(0);
