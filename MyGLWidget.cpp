@@ -35,7 +35,7 @@ void MyGLWidget::paintGL ()
   //glDrawArrays(GL_TRIANGLES, 1, 4);
   //glDrawArrays(GL_TRIANGLES, 2, 5);
 
-  glDrawArrays(GL_TRIANGLE_FAN, 0, 5);
+  glDrawArrays(GL_TRIANGLE_STRIP, 0, 5);
 
 
   // Desactivem el VAO
@@ -75,12 +75,18 @@ void MyGLWidget::createBuffers ()
 
   // Creació del Vertex Array Object (VAO) que usarem per pintar
   glGenVertexArrays(1, &VAO);
-  glBindVertexArray(VAO);
+  glBindVertexArray(VAO);//Activa el VAO identificat per (en aquest cas) VAO
 
   // Creació del buffer amb les dades dels vèrtexs
   glGenBuffers(1, &VBO);
   glBindBuffer(GL_ARRAY_BUFFER, VBO);
   glBufferData(GL_ARRAY_BUFFER, sizeof(Vertices), Vertices, GL_STATIC_DRAW);
+
+  // Creació del buffer amb les dades dels vèrtexs 2
+  glGenBuffers(1, &VBO2);
+  glBindBuffer(GL_ARRAY_BUFFER, VBO2);
+  glBufferData(GL_ARRAY_BUFFER, sizeof(Vertices2), Vertices2, GL_STATIC_DRAW);
+
   // Activem l'atribut que farem servir per vèrtex
   glVertexAttribPointer(vertexLoc, 3, GL_FLOAT, GL_FALSE, 0, 0);
   glEnableVertexAttribArray(vertexLoc);
