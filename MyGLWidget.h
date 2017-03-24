@@ -19,19 +19,20 @@ class MyGLWidget : public QOpenGLWidget, protected QOpenGLFunctions_3_3_Core
     // paintGL - Mètode cridat cada cop que cal refrescar la finestra.
     // Tot el que es dibuixa es dibuixa aqui.
     virtual void paintGL ();
- 
+
     // resize - Es cridat quan canvia la mida del widget
-    virtual void resizeGL (int width, int height);  
+    virtual void resizeGL (int width, int height);
 
   private:
     void createBuffers ();
     void carregaShaders ();
-    
+
     // attribute locations
     GLuint vertexLoc;
-    
+
     // Program
     QOpenGLShaderProgram *program;
 
     GLuint VAO, VBO;
+    GLuint VAO2, VBO2;
 };

@@ -68,6 +68,11 @@ void MyGLWidget::createBuffers ()
   Vertices[0] = glm::vec3(0.8, -1.0, 0.0);
   Vertices[4] = glm::vec3(0.0, 1.0, 0.0);
 
+  glm::vec3 Vertices2[3];
+  Vertices2[0] = glm::vec3(1.0, 1.0, 0.0);
+  Vertices2[1] = glm::vec3(1.0, 0.9, 0.0);
+  Vertices2[2] = glm::vec3(0.9, 1.0, 0.0);
+
   // Creació del Vertex Array Object (VAO) que usarem per pintar
   glGenVertexArrays(1, &VAO);
   glBindVertexArray(VAO);
