@@ -21,6 +21,7 @@ void MyGLWidget::initializeGL ()
   glClearColor (0.5, 0.7, 1.0, 1.0); // defineix color de fons (d'esborrat)
   carregaShaders();
   createBuffers();
+  printf("whaat\n");
 }
 
 void MyGLWidget::paintGL ()
@@ -74,13 +75,15 @@ void MyGLWidget::createBuffers ()
   Vertices2[2] = glm::vec3(0.9, 1.0, 0.0);
 
   // Creació del Vertex Array Object (VAO) que usarem per pintar
-  glGenVertexArrays(1, &VAO);
-  glBindVertexArray(VAO);//Activa el VAO identificat per (en aquest cas) VAO
+  glGenVertexArrays(2, &VAO);
+  glBindVertexArray(VAO[0]);//Activa el VAO identificat per (en aquest cas) VAO
 
   // Creació del buffer amb les dades dels vèrtexs
   glGenBuffers(1, &VBO);
   glBindBuffer(GL_ARRAY_BUFFER, VBO);
   glBufferData(GL_ARRAY_BUFFER, sizeof(Vertices), Vertices, GL_STATIC_DRAW);
+
+  // Creació del Vertex Array Object (VAO) que usarem per pintar
 
   // Creació del buffer amb les dades dels vèrtexs 2
   glGenBuffers(1, &VBO2);

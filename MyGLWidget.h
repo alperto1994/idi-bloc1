@@ -11,7 +11,7 @@ class MyGLWidget : public QOpenGLWidget, protected QOpenGLFunctions_3_3_Core
   public:
     MyGLWidget (QWidget *parent=0);
     ~MyGLWidget ();
-    
+
   protected:
     // initializeGL - Aqui incluim les inicialitzacions del contexte grafic.
     virtual void initializeGL ();
@@ -33,6 +33,6 @@ class MyGLWidget : public QOpenGLWidget, protected QOpenGLFunctions_3_3_Core
     // Program
     QOpenGLShaderProgram *program;
 
-    GLuint VAO, VBO;
+    GLuint VAO[], VBO;
     GLuint VAO2, VBO2;
 };
