@@ -3,6 +3,7 @@
 out vec4 FragColor;
 
 void main() {
-    FragColor = vec4(0, 0, 0, 1);
+  FragColor = vec4 (1.);
+  if ( gl_FragCoord .x < 700.)
+  FragColor = vec4 (1. ,0. ,0. ,1.);
 }
-
